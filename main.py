@@ -9,6 +9,12 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
+    # Botがログインしたら
+@client.event
+async def on_ready():
+    msg = "こんにちは！です．よろしくね！"
+    await client.send_message(text_chat,msg)
+    
 @client.event
 async def on_message(message):
     # 「おはよう」で始まるか調べる
@@ -20,4 +26,4 @@ async def on_message(message):
             # メッセージが送られてきたチャンネルへメッセージを送ります
             await message.channel.send(m)
 
-client.run("token")
+client.run("NjI4OTY3ODczNjYyMDI1NzYw.XZS7aQ.btGunikGY1IMVXblBgu-DSa41X0")
